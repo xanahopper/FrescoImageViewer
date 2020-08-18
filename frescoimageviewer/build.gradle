@@ -2,12 +2,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 25
+        minSdkVersion 21
+        targetSdkVersion 30
         versionCode 1
         versionName "0.5.0"
     }
@@ -36,8 +36,8 @@ publish {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.1.1'
-    compile 'me.relex:photodraweeview:1.1.0'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.android.support:appcompat-v7:25.1.1'
+    api 'me.relex:photodraweeview:1.1.0'
     provided 'com.facebook.fresco:fresco:0.12.0'
 }
